@@ -20,16 +20,16 @@ exports.addActor = function(id,name,description){
     actors[id] = {name:name, description:description};
 };
 
-exports.addMessage = function(idFrom, idTo, message,  answer){
-    messages.push({from:idFrom, to:idTo, message:message, answer:answer});
+exports.addMessage = function(idFrom, idTo, message,  answer, sameTime){
+    messages.push({from:idFrom, to:idTo, message:message, answer:answer, sameTime:sameTime});
 };
 
 /**
  *
  */
-exports.addSignal = function(idFrom, idTo, message,  messageType){
-    log.debug('Adding message from='+idFrom+' to='+idTo+' message='+message+' type='+messageType);
-    messages.push({from:idFrom, to:idTo, message:message, type:messageType});
+exports.addSignal = function(idFrom, idTo, message,  messageType, sameTime){
+    log.debug('Adding message from='+idFrom+' to='+idTo+' message='+message+' type='+messageType+' sametime='+sameTime);
+    messages.push({from:idFrom, to:idTo, message:message, type:messageType, sameTime:sameTime});
 };
 
 exports.getMessages = function(){
@@ -109,7 +109,7 @@ exports.apply = function(param){
                 exports.addNote(param.actor,param.placement, param.text);
                 break;
             case 'addMessage':
-                exports.addSignal(param.from, param.to, param.msg, param.signalType);
+                exports.addSignal(param.from, param.to, param.msg, param.signalType, param.sameTime);
                 break;
             case 'loopStart':
                 //log.debug('Loop text: ',param.loopText);

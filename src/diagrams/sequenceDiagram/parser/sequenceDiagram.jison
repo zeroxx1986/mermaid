@@ -27,7 +27,7 @@
 <INITIAL,ID,ALIAS,LINE>\#[^\n]*  /* skip comments */
 \%%[^\n]*                        /* skip comments */
 "participant"     { this.begin('ID'); return 'participant'; }
-<ID>[^\->:\n,;]+?(?=((?!\n)\s)+"as"(?!\n)\s|[#\n;]|$)  { this.begin('ALIAS'); return 'ACTOR'; }
+<ID>[^\->:\n,;\+]+?(?=((?!\n)\s)+"as"(?!\n)\s|[#\n;]|$)  { this.begin('ALIAS'); return 'ACTOR'; }
 <ALIAS>"as"       { this.popState(); this.popState(); this.begin('LINE'); return 'AS'; }
 <ALIAS>(?:)       { this.popState(); this.popState(); return 'NL'; }
 "loop"            { this.begin('LINE'); return 'loop'; }
@@ -44,13 +44,14 @@
 "sequenceDiagram" return 'SD';
 ","               return ',';
 ";"               return 'NL';
-[^\->:\n,;]+      return 'ACTOR';
+[^\->:\n,;\+]+    return 'ACTOR';
 "->>"             return 'SOLID_ARROW';
 "-->>"            return 'DOTTED_ARROW';
 "->"              return 'SOLID_OPEN_ARROW';
 "-->"             return 'DOTTED_OPEN_ARROW';
 \-[x]             return 'SOLID_CROSS';
 \-\-[x]           return 'DOTTED_CROSS';
+\s*"+"\s*         return 'SAMELINE';
 ":"[^#\n;]+       return 'TXT';
 <<EOF>>           return 'NL';
 .                 return 'INVALID';
@@ -82,6 +83,7 @@ statement
 	: 'participant' actor 'AS' restOfLine 'NL' {$2.description=$4; $$=$2;}
 	| 'participant' actor 'NL' {$$=$2;}
 	| signal 'NL'
+        | samelinesignal 'NL'
 	| note_statement 'NL'
 	| 'title' SPACE text 'NL'
 	| 'loop' restOfLine document end
@@ -136,9 +138,14 @@ placement
 	| 'right_of'  { $$ = yy.PLACEMENT.RIGHTOF; }
 	;
 
+samelinesignal
+	: actor signaltype actor SAMELINE text2
+	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:$5, sameTime:"+"}]}
+	;
+
 signal
 	: actor signaltype actor text2
-	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:$4}]}
+	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:$4, sameTime:" "}]}
 	;
 
 actor

@@ -368,8 +368,10 @@ module.exports.draw = function (text, id) {
                 svgDraw.drawLoop(diagram, loopData,'alt', conf);
                 exports.bounds.bumpVerticalPos(conf.boxMargin);
                 break;
-            default:
-                exports.bounds.bumpVerticalPos(conf.messageMargin);
+            default:	
+                if( msg.sameTime != "+" ) {
+		  exports.bounds.bumpVerticalPos(conf.messageMargin);
+		}
                 startx = actors[msg.from].x + conf.width/2;
                 stopx = actors[msg.to].x + conf.width/2;
 
