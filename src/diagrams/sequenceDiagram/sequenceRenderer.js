@@ -106,8 +106,12 @@ exports.bounds = {
     },
     addElseToLoop:function(message){
         var loop = this.list.pop();
-        loop.elsey =  exports.bounds.getVerticalPos();
-        loop.elseText = message;
+        if( typeof loop.elsey === 'undefined' ) {
+          loop.elsey = [];
+          loop.elseText = [];
+        }
+        loop.elsey.push( exports.bounds.getVerticalPos() );
+        loop.elseText.push( message );
         this.list.push(loop);
     },
     bumpVerticalPos:function(bump){

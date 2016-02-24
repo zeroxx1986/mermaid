@@ -12,7 +12,7 @@
  * somewhere in the page or something completely different.
  */
 var Logger = require('./logger');
-var log = new Logger.Log();
+var log = new Logger.Log(1);
 
 var graph = require('./diagrams/flowchart/graphDb');
 var utils = require('./utils');

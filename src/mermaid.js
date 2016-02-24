@@ -5,7 +5,7 @@
 
 var Logger = require('./logger');
 
-var log = new Logger.Log();
+var log = new Logger.Log(1);
 var mermaidAPI = require('./mermaidAPI');
 var nextId = 0;
 

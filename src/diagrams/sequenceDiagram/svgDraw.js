@@ -146,7 +146,9 @@ exports.drawLoop = function(elem,bounds,labelText, conf){
     drawLoopLine(bounds.startx, bounds.stopy , bounds.stopx , bounds.stopy );
     drawLoopLine(bounds.startx, bounds.starty, bounds.startx, bounds.stopy );
     if(typeof bounds.elsey !== 'undefined'){
-        drawLoopLine(bounds.startx, bounds.elsey, bounds.stopx, bounds.elsey );
+      bounds.elsey.forEach(function(element) {
+        drawLoopLine(bounds.startx, element, bounds.stopx, element );
+      });
     }
 
     var txt = exports.getTextObj();
@@ -168,10 +170,14 @@ exports.drawLoop = function(elem,bounds,labelText, conf){
 
     exports.drawText(g,txt);
 
+    var cntr = 0;
     if(typeof bounds.elseText !== 'undefined') {
-        txt.text = '[ ' + bounds.elseText + ' ]';
-        txt.y = bounds.elsey + 1.5 * conf.boxMargin;
+      bounds.elseText.forEach(function(element) {
+        txt.text = '[ ' + element + ' ]';
+        txt.y = bounds.elsey[cntr] + 1.5 * conf.boxMargin;
         exports.drawText(g, txt);
+        cntr++;
+      });
     }
 };
 

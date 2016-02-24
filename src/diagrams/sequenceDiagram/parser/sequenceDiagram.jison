@@ -111,7 +111,22 @@ statement
 		$3.push({type: 'altEnd', signalType: yy.LINETYPE.ALT_END});
 
 		$$=$3;}
-	;
+	| alt restOfLine document else restOfLine document else restOfLine document end
+	{
+		// Alt start
+		$3.unshift({type: 'altStart', altText:$2, signalType: yy.LINETYPE.ALT_START});
+		// Content in alt is already in $3
+		// Else
+		$3.push({type: 'else', altText:$5, signalType: yy.LINETYPE.ALT_ELSE});
+    $3 = $3.concat($6);
+    $3.push({type: 'else', altText:$7, signalType: yy.LINETYPE.ALT_ELSE});
+		// Content in other alt
+		$3 = $3.concat($8);
+		// End
+		$3.push({type: 'altEnd', signalType: yy.LINETYPE.ALT_END});
+
+		$$=$3;}
+;
 
 note_statement
 	: 'note' placement actor text2
