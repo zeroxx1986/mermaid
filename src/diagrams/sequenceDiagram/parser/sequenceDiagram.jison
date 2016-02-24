@@ -118,10 +118,49 @@ statement
 		// Content in alt is already in $3
 		// Else
 		$3.push({type: 'else', altText:$5, signalType: yy.LINETYPE.ALT_ELSE});
-    $3 = $3.concat($6);
-    $3.push({type: 'else', altText:$7, signalType: yy.LINETYPE.ALT_ELSE});
-		// Content in other alt
-		$3 = $3.concat($8);
+                $3 = $3.concat($6);
+                // Second else
+                $3.push({type: 'else', altText:$8, signalType: yy.LINETYPE.ALT_ELSE});
+		$3 = $3.concat($9);
+		// End
+		$3.push({type: 'altEnd', signalType: yy.LINETYPE.ALT_END});
+
+		$$=$3;}
+	| alt restOfLine document else restOfLine document else restOfLine document else restOfLine document end
+	{
+		// Alt start
+		$3.unshift({type: 'altStart', altText:$2, signalType: yy.LINETYPE.ALT_START});
+		// Content in alt is already in $3
+		// Else
+		$3.push({type: 'else', altText:$5, signalType: yy.LINETYPE.ALT_ELSE});
+                $3 = $3.concat($6);
+                // Second else
+                $3.push({type: 'else', altText:$8, signalType: yy.LINETYPE.ALT_ELSE});
+		$3 = $3.concat($9);
+                // Third else
+                $3.push({type: 'else', altText:$11, signalType: yy.LINETYPE.ALT_ELSE});
+		$3 = $3.concat($12);
+		// End
+		$3.push({type: 'altEnd', signalType: yy.LINETYPE.ALT_END});
+
+		$$=$3;}
+	| alt restOfLine document else restOfLine document else restOfLine document else restOfLine document else restOfLine document end
+	{
+		// Alt start
+		$3.unshift({type: 'altStart', altText:$2, signalType: yy.LINETYPE.ALT_START});
+		// Content in alt is already in $3
+		// Else
+		$3.push({type: 'else', altText:$5, signalType: yy.LINETYPE.ALT_ELSE});
+                $3 = $3.concat($6);
+                // Second else
+                $3.push({type: 'else', altText:$8, signalType: yy.LINETYPE.ALT_ELSE});
+		$3 = $3.concat($9);
+                // Third else
+                $3.push({type: 'else', altText:$11, signalType: yy.LINETYPE.ALT_ELSE});
+		$3 = $3.concat($12);
+                // Fourth else
+                $3.push({type: 'else', altText:$14, signalType: yy.LINETYPE.ALT_ELSE});
+		$3 = $3.concat($15);
 		// End
 		$3.push({type: 'altEnd', signalType: yy.LINETYPE.ALT_END});
 
