@@ -51,7 +51,7 @@
 "-->"             return 'DOTTED_OPEN_ARROW';
 \-[x]             return 'SOLID_CROSS';
 \-\-[x]           return 'DOTTED_CROSS';
-\s*"+"\s*         return 'SAMELINE';
+\s*"+"            return 'SAMELINE';
 ":"[^#\n;]+       return 'TXT';
 <<EOF>>           return 'NL';
 .                 return 'INVALID';
@@ -84,6 +84,8 @@ statement
 	| 'participant' actor 'NL' {$$=$2;}
 	| signal 'NL'
         | samelinesignal 'NL'
+        | emptysignal 'NL'
+        | emptysamelinesignal 'NL'
 	| note_statement 'NL'
 	| 'title' SPACE text 'NL'
 	| 'loop' restOfLine document end
@@ -140,12 +142,22 @@ placement
 
 samelinesignal
 	: actor signaltype actor SAMELINE text2
-	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:$5, sameTime:"+"}]}
+	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:$5, sameTime:$4}]}
 	;
 
 signal
 	: actor signaltype actor text2
-	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:$4, sameTime:" "}]}
+	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:$4, sameTime:null}]}
+	;
+
+emptysignal
+	: actor signaltype actor
+	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:'', sameTime:null}]}
+	;
+
+emptysamelinesignal
+	: actor signaltype actor SAMELINE
+	{$$ = [$1,$3,{type: 'addMessage', from:$1.actor, to:$3.actor, signalType:$2, msg:'', sameTime:$4}]}
 	;
 
 actor

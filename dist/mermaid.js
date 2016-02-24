@@ -38242,20 +38242,20 @@ var sequenceDiagram = (function () {
         $V1 = [1, 5],
         $V2 = [1, 7],
         $V3 = [1, 8],
-        $V4 = [1, 12],
-        $V5 = [1, 13],
-        $V6 = [1, 14],
-        $V7 = [1, 15],
-        $V8 = [1, 17],
-        $V9 = [1, 18],
-        $Va = [1, 7, 9, 10, 17, 19, 20, 21, 22, 23, 24, 35],
-        $Vb = [7, 9, 10, 17, 19, 20, 21, 22, 24, 35],
-        $Vc = [1, 56];
+        $V4 = [1, 14],
+        $V5 = [1, 15],
+        $V6 = [1, 16],
+        $V7 = [1, 17],
+        $V8 = [1, 19],
+        $V9 = [1, 20],
+        $Va = [1, 7, 9, 10, 19, 21, 22, 23, 24, 25, 26, 37],
+        $Vb = [7, 9, 10, 19, 21, 22, 23, 24, 26, 37],
+        $Vc = [1, 60];
     var parser = { trace: function trace() {},
         yy: {},
-        symbols_: { "error": 2, "start": 3, "SD": 4, "document": 5, "line": 6, "SPACE": 7, "statement": 8, "NL": 9, "participant": 10, "actor": 11, "AS": 12, "restOfLine": 13, "signal": 14, "samelinesignal": 15, "note_statement": 16, "title": 17, "text": 18, "loop": 19, "end": 20, "opt": 21, "alt": 22, "else": 23, "note": 24, "placement": 25, "text2": 26, "over": 27, "actor_pair": 28, "spaceList": 29, ",": 30, "left_of": 31, "right_of": 32, "signaltype": 33, "SAMELINE": 34, "ACTOR": 35, "SOLID_OPEN_ARROW": 36, "DOTTED_OPEN_ARROW": 37, "SOLID_ARROW": 38, "DOTTED_ARROW": 39, "SOLID_CROSS": 40, "DOTTED_CROSS": 41, "TXT": 42, "$accept": 0, "$end": 1 },
-        terminals_: { 2: "error", 4: "SD", 7: "SPACE", 9: "NL", 10: "participant", 12: "AS", 13: "restOfLine", 17: "title", 18: "text", 19: "loop", 20: "end", 21: "opt", 22: "alt", 23: "else", 24: "note", 27: "over", 30: ",", 31: "left_of", 32: "right_of", 34: "SAMELINE", 35: "ACTOR", 36: "SOLID_OPEN_ARROW", 37: "DOTTED_OPEN_ARROW", 38: "SOLID_ARROW", 39: "DOTTED_ARROW", 40: "SOLID_CROSS", 41: "DOTTED_CROSS", 42: "TXT" },
-        productions_: [0, [3, 2], [5, 0], [5, 2], [6, 2], [6, 1], [6, 1], [8, 5], [8, 3], [8, 2], [8, 2], [8, 2], [8, 4], [8, 4], [8, 4], [8, 7], [16, 4], [16, 4], [29, 2], [29, 1], [28, 3], [28, 1], [25, 1], [25, 1], [15, 5], [14, 4], [11, 1], [33, 1], [33, 1], [33, 1], [33, 1], [33, 1], [33, 1], [26, 1]],
+        symbols_: { "error": 2, "start": 3, "SD": 4, "document": 5, "line": 6, "SPACE": 7, "statement": 8, "NL": 9, "participant": 10, "actor": 11, "AS": 12, "restOfLine": 13, "signal": 14, "samelinesignal": 15, "emptysignal": 16, "emptysamelinesignal": 17, "note_statement": 18, "title": 19, "text": 20, "loop": 21, "end": 22, "opt": 23, "alt": 24, "else": 25, "note": 26, "placement": 27, "text2": 28, "over": 29, "actor_pair": 30, "spaceList": 31, ",": 32, "left_of": 33, "right_of": 34, "signaltype": 35, "SAMELINE": 36, "ACTOR": 37, "SOLID_OPEN_ARROW": 38, "DOTTED_OPEN_ARROW": 39, "SOLID_ARROW": 40, "DOTTED_ARROW": 41, "SOLID_CROSS": 42, "DOTTED_CROSS": 43, "TXT": 44, "$accept": 0, "$end": 1 },
+        terminals_: { 2: "error", 4: "SD", 7: "SPACE", 9: "NL", 10: "participant", 12: "AS", 13: "restOfLine", 19: "title", 20: "text", 21: "loop", 22: "end", 23: "opt", 24: "alt", 25: "else", 26: "note", 29: "over", 32: ",", 33: "left_of", 34: "right_of", 36: "SAMELINE", 37: "ACTOR", 38: "SOLID_OPEN_ARROW", 39: "DOTTED_OPEN_ARROW", 40: "SOLID_ARROW", 41: "DOTTED_ARROW", 42: "SOLID_CROSS", 43: "DOTTED_CROSS", 44: "TXT" },
+        productions_: [0, [3, 2], [5, 0], [5, 2], [6, 2], [6, 1], [6, 1], [8, 5], [8, 3], [8, 2], [8, 2], [8, 2], [8, 2], [8, 2], [8, 4], [8, 4], [8, 4], [8, 7], [18, 4], [18, 4], [31, 2], [31, 1], [30, 3], [30, 1], [27, 1], [27, 1], [15, 5], [14, 4], [16, 3], [17, 4], [11, 1], [35, 1], [35, 1], [35, 1], [35, 1], [35, 1], [35, 1], [28, 1]],
         performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate, /* action[1] */$$, /* vstack */_$ /* lstack */) {
             /* this == yyval */
 
@@ -38282,19 +38282,19 @@ var sequenceDiagram = (function () {
                 case 8:
                     this.$ = $$[$0 - 1];
                     break;
-                case 13:
+                case 15:
 
                     $$[$0 - 1].unshift({ type: 'loopStart', loopText: $$[$0 - 2], signalType: yy.LINETYPE.LOOP_START });
                     $$[$0 - 1].push({ type: 'loopEnd', loopText: $$[$0 - 2], signalType: yy.LINETYPE.LOOP_END });
                     this.$ = $$[$0 - 1];
                     break;
-                case 14:
+                case 16:
 
                     $$[$0 - 1].unshift({ type: 'optStart', optText: $$[$0 - 2], signalType: yy.LINETYPE.OPT_START });
                     $$[$0 - 1].push({ type: 'optEnd', optText: $$[$0 - 2], signalType: yy.LINETYPE.OPT_END });
                     this.$ = $$[$0 - 1];
                     break;
-                case 15:
+                case 17:
 
                     // Alt start
                     $$[$0 - 4].unshift({ type: 'altStart', altText: $$[$0 - 5], signalType: yy.LINETYPE.ALT_START });
@@ -38308,11 +38308,11 @@ var sequenceDiagram = (function () {
 
                     this.$ = $$[$0 - 4];
                     break;
-                case 16:
+                case 18:
 
                     this.$ = [$$[$0 - 1], { type: 'addNote', placement: $$[$0 - 2], actor: $$[$0 - 1].actor, text: $$[$0] }];
                     break;
-                case 17:
+                case 19:
 
                     // Coerce actor_pair into a [to, from, ...] array
                     $$[$0 - 2] = [].concat($$[$0 - 1], $$[$0 - 1]).slice(0, 2);
@@ -38320,52 +38320,58 @@ var sequenceDiagram = (function () {
                     $$[$0 - 2][1] = $$[$0 - 2][1].actor;
                     this.$ = [$$[$0 - 1], { type: 'addNote', placement: yy.PLACEMENT.OVER, actor: $$[$0 - 2].slice(0, 2), text: $$[$0] }];
                     break;
-                case 20:
+                case 22:
                     this.$ = [$$[$0 - 2], $$[$0]];
                     break;
-                case 21:
+                case 23:
                     this.$ = $$[$0];
                     break;
-                case 22:
+                case 24:
                     this.$ = yy.PLACEMENT.LEFTOF;
                     break;
-                case 23:
+                case 25:
                     this.$ = yy.PLACEMENT.RIGHTOF;
                     break;
-                case 24:
-                    this.$ = [$$[$0 - 4], $$[$0 - 2], { type: 'addMessage', from: $$[$0 - 4].actor, to: $$[$0 - 2].actor, signalType: $$[$0 - 3], msg: $$[$0], sameTime: "+" }];
-                    break;
-                case 25:
-                    this.$ = [$$[$0 - 3], $$[$0 - 1], { type: 'addMessage', from: $$[$0 - 3].actor, to: $$[$0 - 1].actor, signalType: $$[$0 - 2], msg: $$[$0], sameTime: " " }];
-                    break;
                 case 26:
-                    this.$ = { type: 'addActor', actor: $$[$0] };
+                    this.$ = [$$[$0 - 4], $$[$0 - 2], { type: 'addMessage', from: $$[$0 - 4].actor, to: $$[$0 - 2].actor, signalType: $$[$0 - 3], msg: $$[$0], sameTime: $$[$0 - 1] }];
                     break;
                 case 27:
-                    this.$ = yy.LINETYPE.SOLID_OPEN;
+                    this.$ = [$$[$0 - 3], $$[$0 - 1], { type: 'addMessage', from: $$[$0 - 3].actor, to: $$[$0 - 1].actor, signalType: $$[$0 - 2], msg: $$[$0], sameTime: null }];
                     break;
                 case 28:
-                    this.$ = yy.LINETYPE.DOTTED_OPEN;
+                    this.$ = [$$[$0 - 2], $$[$0], { type: 'addMessage', from: $$[$0 - 2].actor, to: $$[$0].actor, signalType: $$[$0 - 1], msg: '', sameTime: null }];
                     break;
                 case 29:
-                    this.$ = yy.LINETYPE.SOLID;
+                    this.$ = [$$[$0 - 3], $$[$0 - 1], { type: 'addMessage', from: $$[$0 - 3].actor, to: $$[$0 - 1].actor, signalType: $$[$0 - 2], msg: '', sameTime: $$[$0] }];
                     break;
                 case 30:
-                    this.$ = yy.LINETYPE.DOTTED;
+                    this.$ = { type: 'addActor', actor: $$[$0] };
                     break;
                 case 31:
-                    this.$ = yy.LINETYPE.SOLID_CROSS;
+                    this.$ = yy.LINETYPE.SOLID_OPEN;
                     break;
                 case 32:
-                    this.$ = yy.LINETYPE.DOTTED_CROSS;
+                    this.$ = yy.LINETYPE.DOTTED_OPEN;
                     break;
                 case 33:
+                    this.$ = yy.LINETYPE.SOLID;
+                    break;
+                case 34:
+                    this.$ = yy.LINETYPE.DOTTED;
+                    break;
+                case 35:
+                    this.$ = yy.LINETYPE.SOLID_CROSS;
+                    break;
+                case 36:
+                    this.$ = yy.LINETYPE.DOTTED_CROSS;
+                    break;
+                case 37:
                     this.$ = $$[$0].substring(1).trim().replace(/\\n/gm, "\n");
                     break;
             }
         },
-        table: [{ 3: 1, 4: [1, 2] }, { 1: [3] }, o([1, 7, 9, 10, 17, 19, 21, 22, 24, 35], $V0, { 5: 3 }), { 1: [2, 1], 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 16, 14: 9, 15: 10, 16: 11, 17: $V4, 19: $V5, 21: $V6, 22: $V7, 24: $V8, 35: $V9 }, o($Va, [2, 3]), { 8: 19, 10: $V3, 11: 16, 14: 9, 15: 10, 16: 11, 17: $V4, 19: $V5, 21: $V6, 22: $V7, 24: $V8, 35: $V9 }, o($Va, [2, 5]), o($Va, [2, 6]), { 11: 20, 35: $V9 }, { 9: [1, 21] }, { 9: [1, 22] }, { 9: [1, 23] }, { 7: [1, 24] }, { 13: [1, 25] }, { 13: [1, 26] }, { 13: [1, 27] }, { 33: 28, 36: [1, 29], 37: [1, 30], 38: [1, 31], 39: [1, 32], 40: [1, 33], 41: [1, 34] }, { 25: 35, 27: [1, 36], 31: [1, 37], 32: [1, 38] }, o([9, 12, 30, 34, 36, 37, 38, 39, 40, 41, 42], [2, 26]), o($Va, [2, 4]), { 9: [1, 40], 12: [1, 39] }, o($Va, [2, 9]), o($Va, [2, 10]), o($Va, [2, 11]), { 18: [1, 41] }, o($Vb, $V0, { 5: 42 }), o($Vb, $V0, { 5: 43 }), o([7, 9, 10, 17, 19, 21, 22, 23, 24, 35], $V0, { 5: 44 }), { 11: 45, 35: $V9 }, { 35: [2, 27] }, { 35: [2, 28] }, { 35: [2, 29] }, { 35: [2, 30] }, { 35: [2, 31] }, { 35: [2, 32] }, { 11: 46, 35: $V9 }, { 11: 48, 28: 47, 35: $V9 }, { 35: [2, 22] }, { 35: [2, 23] }, { 13: [1, 49] }, o($Va, [2, 8]), { 9: [1, 50] }, { 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 16, 14: 9, 15: 10, 16: 11, 17: $V4, 19: $V5, 20: [1, 51], 21: $V6, 22: $V7, 24: $V8, 35: $V9 }, { 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 16, 14: 9, 15: 10, 16: 11, 17: $V4, 19: $V5, 20: [1, 52], 21: $V6, 22: $V7, 24: $V8, 35: $V9 }, { 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 16, 14: 9, 15: 10, 16: 11, 17: $V4, 19: $V5, 21: $V6, 22: $V7, 23: [1, 53], 24: $V8, 35: $V9 }, { 26: 54, 34: [1, 55], 42: $Vc }, { 26: 57, 42: $Vc }, { 26: 58, 42: $Vc }, { 30: [1, 59], 42: [2, 21] }, { 9: [1, 60] }, o($Va, [2, 12]), o($Va, [2, 13]), o($Va, [2, 14]), { 13: [1, 61] }, { 9: [2, 25] }, { 26: 62, 42: $Vc }, { 9: [2, 33] }, { 9: [2, 16] }, { 9: [2, 17] }, { 11: 63, 35: $V9 }, o($Va, [2, 7]), o($Vb, $V0, { 5: 64 }), { 9: [2, 24] }, { 42: [2, 20] }, { 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 16, 14: 9, 15: 10, 16: 11, 17: $V4, 19: $V5, 20: [1, 65], 21: $V6, 22: $V7, 24: $V8, 35: $V9 }, o($Va, [2, 15])],
-        defaultActions: { 29: [2, 27], 30: [2, 28], 31: [2, 29], 32: [2, 30], 33: [2, 31], 34: [2, 32], 37: [2, 22], 38: [2, 23], 54: [2, 25], 56: [2, 33], 57: [2, 16], 58: [2, 17], 62: [2, 24], 63: [2, 20] },
+        table: [{ 3: 1, 4: [1, 2] }, { 1: [3] }, o([1, 7, 9, 10, 19, 21, 23, 24, 26, 37], $V0, { 5: 3 }), { 1: [2, 1], 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 18, 14: 9, 15: 10, 16: 11, 17: 12, 18: 13, 19: $V4, 21: $V5, 23: $V6, 24: $V7, 26: $V8, 37: $V9 }, o($Va, [2, 3]), { 8: 21, 10: $V3, 11: 18, 14: 9, 15: 10, 16: 11, 17: 12, 18: 13, 19: $V4, 21: $V5, 23: $V6, 24: $V7, 26: $V8, 37: $V9 }, o($Va, [2, 5]), o($Va, [2, 6]), { 11: 22, 37: $V9 }, { 9: [1, 23] }, { 9: [1, 24] }, { 9: [1, 25] }, { 9: [1, 26] }, { 9: [1, 27] }, { 7: [1, 28] }, { 13: [1, 29] }, { 13: [1, 30] }, { 13: [1, 31] }, { 35: 32, 38: [1, 33], 39: [1, 34], 40: [1, 35], 41: [1, 36], 42: [1, 37], 43: [1, 38] }, { 27: 39, 29: [1, 40], 33: [1, 41], 34: [1, 42] }, o([9, 12, 32, 36, 38, 39, 40, 41, 42, 43, 44], [2, 30]), o($Va, [2, 4]), { 9: [1, 44], 12: [1, 43] }, o($Va, [2, 9]), o($Va, [2, 10]), o($Va, [2, 11]), o($Va, [2, 12]), o($Va, [2, 13]), { 20: [1, 45] }, o($Vb, $V0, { 5: 46 }), o($Vb, $V0, { 5: 47 }), o([7, 9, 10, 19, 21, 23, 24, 25, 26, 37], $V0, { 5: 48 }), { 11: 49, 37: $V9 }, { 37: [2, 31] }, { 37: [2, 32] }, { 37: [2, 33] }, { 37: [2, 34] }, { 37: [2, 35] }, { 37: [2, 36] }, { 11: 50, 37: $V9 }, { 11: 52, 30: 51, 37: $V9 }, { 37: [2, 24] }, { 37: [2, 25] }, { 13: [1, 53] }, o($Va, [2, 8]), { 9: [1, 54] }, { 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 18, 14: 9, 15: 10, 16: 11, 17: 12, 18: 13, 19: $V4, 21: $V5, 22: [1, 55], 23: $V6, 24: $V7, 26: $V8, 37: $V9 }, { 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 18, 14: 9, 15: 10, 16: 11, 17: 12, 18: 13, 19: $V4, 21: $V5, 22: [1, 56], 23: $V6, 24: $V7, 26: $V8, 37: $V9 }, { 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 18, 14: 9, 15: 10, 16: 11, 17: 12, 18: 13, 19: $V4, 21: $V5, 23: $V6, 24: $V7, 25: [1, 57], 26: $V8, 37: $V9 }, { 9: [2, 28], 28: 58, 36: [1, 59], 44: $Vc }, { 28: 61, 44: $Vc }, { 28: 62, 44: $Vc }, { 32: [1, 63], 44: [2, 23] }, { 9: [1, 64] }, o($Va, [2, 14]), o($Va, [2, 15]), o($Va, [2, 16]), { 13: [1, 65] }, { 9: [2, 27] }, { 9: [2, 29], 28: 66, 44: $Vc }, { 9: [2, 37] }, { 9: [2, 18] }, { 9: [2, 19] }, { 11: 67, 37: $V9 }, o($Va, [2, 7]), o($Vb, $V0, { 5: 68 }), { 9: [2, 26] }, { 44: [2, 22] }, { 6: 4, 7: $V1, 8: 6, 9: $V2, 10: $V3, 11: 18, 14: 9, 15: 10, 16: 11, 17: 12, 18: 13, 19: $V4, 21: $V5, 22: [1, 69], 23: $V6, 24: $V7, 26: $V8, 37: $V9 }, o($Va, [2, 17])],
+        defaultActions: { 33: [2, 31], 34: [2, 32], 35: [2, 33], 36: [2, 34], 37: [2, 35], 38: [2, 36], 41: [2, 24], 42: [2, 25], 58: [2, 27], 60: [2, 37], 61: [2, 18], 62: [2, 19], 66: [2, 26], 67: [2, 22] },
         parseError: function parseError(str, hash) {
             if (hash.recoverable) {
                 this.trace(str);
@@ -38863,7 +38869,7 @@ var sequenceDiagram = (function () {
                         this.begin('ID');return 10;
                         break;
                     case 6:
-                        this.begin('ALIAS');return 35;
+                        this.begin('ALIAS');return 37;
                         break;
                     case 7:
                         this.popState();this.popState();this.begin('LINE');return 12;
@@ -38872,73 +38878,73 @@ var sequenceDiagram = (function () {
                         this.popState();this.popState();return 9;
                         break;
                     case 9:
-                        this.begin('LINE');return 19;
-                        break;
-                    case 10:
                         this.begin('LINE');return 21;
                         break;
+                    case 10:
+                        this.begin('LINE');return 23;
+                        break;
                     case 11:
-                        this.begin('LINE');return 22;
+                        this.begin('LINE');return 24;
                         break;
                     case 12:
-                        this.begin('LINE');return 23;
+                        this.begin('LINE');return 25;
                         break;
                     case 13:
                         this.popState();return 13;
                         break;
                     case 14:
-                        return 20;
+                        return 22;
                         break;
                     case 15:
-                        return 31;
+                        return 33;
                         break;
                     case 16:
-                        return 32;
+                        return 34;
                         break;
                     case 17:
-                        return 27;
+                        return 29;
                         break;
                     case 18:
-                        return 24;
+                        return 26;
                         break;
                     case 19:
-                        return 17;
+                        return 19;
                         break;
                     case 20:
                         return 4;
                         break;
                     case 21:
-                        return 30;
+                        return 32;
                         break;
                     case 22:
                         return 9;
                         break;
                     case 23:
-                        return 35;
-                        break;
-                    case 24:
-                        return 38;
-                        break;
-                    case 25:
-                        return 39;
-                        break;
-                    case 26:
-                        return 36;
-                        break;
-                    case 27:
                         return 37;
                         break;
-                    case 28:
+                    case 24:
                         return 40;
                         break;
-                    case 29:
+                    case 25:
                         return 41;
                         break;
+                    case 26:
+                        return 38;
+                        break;
+                    case 27:
+                        return 39;
+                        break;
+                    case 28:
+                        return 42;
+                        break;
+                    case 29:
+                        return 43;
+                        break;
                     case 30:
-                        return 34;
+                        return 36;
                         break;
                     case 31:
-                        return 42;
+                        return 44;
                         break;
                     case 32:
                         return 9;
@@ -38948,7 +38954,7 @@ var sequenceDiagram = (function () {
                         break;
                 }
             },
-            rules: [/^(?:[\n]+)/i, /^(?:\s+)/i, /^(?:((?!\n)\s)+)/i, /^(?:#[^\n]*)/i, /^(?:%[^\n]*)/i, /^(?:participant\b)/i, /^(?:[^\->:\n,;\+]+?(?=((?!\n)\s)+as(?!\n)\s|[#\n;]|$))/i, /^(?:as\b)/i, /^(?:(?:))/i, /^(?:loop\b)/i, /^(?:opt\b)/i, /^(?:alt\b)/i, /^(?:else\b)/i, /^(?:[^#\n;]*)/i, /^(?:end\b)/i, /^(?:left of\b)/i, /^(?:right of\b)/i, /^(?:over\b)/i, /^(?:note\b)/i, /^(?:title\b)/i, /^(?:sequenceDiagram\b)/i, /^(?:,)/i, /^(?:;)/i, /^(?:[^\->:\n,;\+]+)/i, /^(?:->>)/i, /^(?:-->>)/i, /^(?:->)/i, /^(?:-->)/i, /^(?:-[x])/i, /^(?:--[x])/i, /^(?:\s*\+\s*)/i, /^(?::[^#\n;]+)/i, /^(?:$)/i, /^(?:.)/i],
+            rules: [/^(?:[\n]+)/i, /^(?:\s+)/i, /^(?:((?!\n)\s)+)/i, /^(?:#[^\n]*)/i, /^(?:%[^\n]*)/i, /^(?:participant\b)/i, /^(?:[^\->:\n,;\+]+?(?=((?!\n)\s)+as(?!\n)\s|[#\n;]|$))/i, /^(?:as\b)/i, /^(?:(?:))/i, /^(?:loop\b)/i, /^(?:opt\b)/i, /^(?:alt\b)/i, /^(?:else\b)/i, /^(?:[^#\n;]*)/i, /^(?:end\b)/i, /^(?:left of\b)/i, /^(?:right of\b)/i, /^(?:over\b)/i, /^(?:note\b)/i, /^(?:title\b)/i, /^(?:sequenceDiagram\b)/i, /^(?:,)/i, /^(?:;)/i, /^(?:[^\->:\n,;\+]+)/i, /^(?:->>)/i, /^(?:-->>)/i, /^(?:->)/i, /^(?:-->)/i, /^(?:-[x])/i, /^(?:--[x])/i, /^(?:\s*\+)/i, /^(?::[^#\n;]+)/i, /^(?:$)/i, /^(?:.)/i],
             conditions: { "LINE": { "rules": [2, 3, 13], "inclusive": false }, "ALIAS": { "rules": [2, 3, 7, 8], "inclusive": false }, "ID": { "rules": [2, 3, 6], "inclusive": false }, "INITIAL": { "rules": [0, 1, 3, 4, 5, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33], "inclusive": true } }
         };
         return lexer;
@@ -39648,6 +39654,8 @@ exports.drawActor = function (elem, left, verticalPos, description, conf) {
  */
 exports.drawLoop = function (elem, bounds, labelText, conf) {
     var g = elem.append('g');
+    var rect = exports.getBoundsRect(bounds.startx, bounds.starty, "rgba(200,255,200,0.5)", bounds.stopx - bounds.startx, bounds.stopy - bounds.starty, 0, 0);
+    exports.drawRect(g, rect);
     var drawLoopLine = function drawLoopLine(startx, starty, stopx, stopy) {
         g.append('line').attr('x1', startx).attr('y1', starty).attr('x2', stopx).attr('y2', stopy).attr('stroke-width', 2).attr('stroke', '#526e52').attr('class', 'loopLine');
     };
@@ -39732,6 +39740,20 @@ exports.getNoteRect = function () {
         height: 100,
         rx: 0,
         ry: 0
+    };
+    return rect;
+};
+
+exports.getBoundsRect = function (x, y, fill, width, height, rx, ry) {
+    var rect = {
+        x: x,
+        y: y,
+        fill: fill,
+        stroke: null,
+        width: width,
+        height: height,
+        rx: rx,
+        ry: ry
     };
     return rect;
 };

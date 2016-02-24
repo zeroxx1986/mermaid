@@ -129,6 +129,8 @@ exports.drawActor = function(elem, left, verticalPos, description,conf){
  */
 exports.drawLoop = function(elem,bounds,labelText, conf){
     var g = elem.append('g');
+    var rect = exports.getBoundsRect( bounds.startx, bounds.starty, "rgba(200,255,200,0.5)", bounds.stopx - bounds.startx, bounds.stopy - bounds.starty, 0, 0 );
+    exports.drawRect(g, rect);
     var drawLoopLine = function(startx,starty,stopx,stopy){
         g.append('line')
             .attr('x1', startx)
@@ -248,4 +250,18 @@ exports.getNoteRect = function(){
         ry     : 0
     };
     return rect;
+};
+
+exports.getBoundsRect = function( x, y, fill, width, height, rx, ry ) {
+  var rect = {
+      x      : x,
+      y      : y,
+      fill   : fill,
+      stroke : null,
+      width  : width,
+      height : height,
+      rx     : rx,
+      ry     : ry
+  };
+  return rect;
 };
