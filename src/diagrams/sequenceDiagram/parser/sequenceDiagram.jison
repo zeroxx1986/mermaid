@@ -143,6 +143,12 @@ statement
 		// End
 		$3.push({type: 'altEnd', signalType: yy.LINETYPE.ALT_END});
 
+for (var key in $3) {
+  if ($3.hasOwnProperty(key)) {
+    console.log(key + " -> " + $3[key]);
+  }
+}
+
 		$$=$3;}
 	| alt restOfLine document else restOfLine document else restOfLine document else restOfLine document else restOfLine document end
 	{

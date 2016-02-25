@@ -38342,6 +38342,12 @@ var sequenceDiagram = (function () {
                     // End
                     $$[$0 - 10].push({ type: 'altEnd', signalType: yy.LINETYPE.ALT_END });
 
+                    for (var key in $$[$0 - 10]) {
+                        if ($$[$0 - 10].hasOwnProperty(key)) {
+                            console.log(key + " -> " + $$[$0 - 10][key]);
+                        }
+                    }
+
                     this.$ = $$[$0 - 10];
                     break;
                 case 20:
